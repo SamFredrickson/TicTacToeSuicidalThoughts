@@ -1,0 +1,7 @@
+F:\visual studio\TicTacToeGame\TicTacToeGame\bin\Debug\TicTacToeGame.exe.config
+F:\visual studio\TicTacToeGame\TicTacToeGame\bin\Debug\TicTacToeGame.exe
+F:\visual studio\TicTacToeGame\TicTacToeGame\bin\Debug\TicTacToeGame.pdb
+F:\visual studio\TicTacToeGame\TicTacToeGame\obj\Debug\TicTacToeGame.csprojAssemblyReference.cache
+F:\visual studio\TicTacToeGame\TicTacToeGame\obj\Debug\TicTacToeGame.csproj.CoreCompileInputs.cache
+F:\visual studio\TicTacToeGame\TicTacToeGame\obj\Debug\TicTacToeGame.exe
+F:\visual studio\TicTacToeGame\TicTacToeGame\obj\Debug\TicTacToeGame.pdb
