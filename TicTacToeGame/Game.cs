@@ -165,40 +165,39 @@ namespace TicTacToeGame
             return flag;
         }
 
-        private void CheckWinner()
+        private bool CheckWinner()
         {
+            bool flag = false;
+
             if (CheckIsZeroWinner())
             {
-                isWon = true;
+                flag = true;
                 dialog.CallWinner(pl1);
                 Console.ReadKey();
             }
 
             if (CheckIsCrossWinner())
             {
-                isWon = true;
-
-                if (pl2.Type == celltype.Cross)
-                {
-                    dialog.CallWinner(pl2);
-                    Console.ReadKey();
-                }
+                flag = true;
+                dialog.CallWinner(pl2);
+                Console.ReadKey();
             }
 
             if (CheckIsTieHappend())
             {
-                if (isWon == false)
+                if (flag == false)
                 {
-                    isTie = true;
+                    flag = true;
                     dialog.CallTie();
                     Console.ReadKey();
                 }
             }
 
+            return flag;
         }
         private void PlayerGoes()
         {
-            while (!isWon && !isTie) {
+            while (!CheckWinner()) {
 
                 if (isterm)
                 {
@@ -210,8 +209,6 @@ namespace TicTacToeGame
                     PutCoors(pl2);
                     isterm = true;
                 }
-
-                CheckWinner();
             }
         }
 
