@@ -17,9 +17,6 @@ namespace TicTacToeGame
         private string[] names;
         private string[] coors;
         private bool isterm = false;
-        private bool isWon = false;
-        private bool isTie = false;
-
 
         public Game()
         {
@@ -135,10 +132,10 @@ namespace TicTacToeGame
 
             // XY_Checking
 
-            if ((field.GameField[0, 0] == celltype.Zero) && (field.GameField[1, 1] == celltype.Zero) && (field.GameField[2, 2] == celltype.Zero))
+            if ((field.GameField[0, 0] == celltype.Cross) && (field.GameField[1, 1] == celltype.Cross) && (field.GameField[2, 2] == celltype.Cross))
                 flag = true;
 
-            if ((field.GameField[0, 2] == celltype.Zero) && (field.GameField[1, 1] == celltype.Zero) && (field.GameField[2, 0] == celltype.Zero))
+            if ((field.GameField[0, 2] == celltype.Cross) && (field.GameField[1, 1] == celltype.Cross) && (field.GameField[2, 0] == celltype.Cross))
                 flag = true;
 
             return flag;
@@ -183,12 +180,9 @@ namespace TicTacToeGame
 
             if (CheckIsTieHappend())
             {
-                if (flag == false)
-                {
-                    flag = true;
-                    dialog.CallTie();
-                    Console.ReadKey();
-                }
+                flag = true;
+                dialog.CallTie();
+                Console.ReadKey();
             }
 
             return flag;
