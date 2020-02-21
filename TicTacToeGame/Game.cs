@@ -84,7 +84,7 @@ namespace TicTacToeGame
             if ((field.GameField[1, 0] == celltype.Zero) && (field.GameField[1, 1] == celltype.Zero) && (field.GameField[1, 2] == celltype.Zero))
                 flag = true;
 
-            if ((field.GameField[2, 0] == celltype.Zero) && (field.GameField[2, 1] == celltype.Zero) && (field.GameField[2, 0] == celltype.Zero))
+            if ((field.GameField[2, 0] == celltype.Zero) && (field.GameField[2, 1] == celltype.Zero) && (field.GameField[2, 2] == celltype.Zero))
                 flag = true;
 
             // Y_Checking
@@ -113,15 +113,13 @@ namespace TicTacToeGame
         {
             bool flag = false;
 
-            // X_Checking
-
             if ((field.GameField[0, 0] == celltype.Cross) && (field.GameField[0, 1] == celltype.Cross) && (field.GameField[0, 2] == celltype.Cross))
                 flag = true;
 
             if ((field.GameField[1, 0] == celltype.Cross) && (field.GameField[1, 1] == celltype.Cross) && (field.GameField[1, 2] == celltype.Cross))
                 flag = true;
 
-            if ((field.GameField[2, 0] == celltype.Cross) && (field.GameField[2, 1] == celltype.Cross) && (field.GameField[2, 0] == celltype.Cross))
+            if ((field.GameField[2, 0] == celltype.Cross) && (field.GameField[2, 1] == celltype.Cross) && (field.GameField[2, 2] == celltype.Cross))
                 flag = true;
 
             // Y_Checking
@@ -137,10 +135,10 @@ namespace TicTacToeGame
 
             // XY_Checking
 
-            if ((field.GameField[0, 0] == celltype.Cross) && (field.GameField[1, 1] == celltype.Cross) && (field.GameField[2, 2] == celltype.Cross))
+            if ((field.GameField[0, 0] == celltype.Zero) && (field.GameField[1, 1] == celltype.Zero) && (field.GameField[2, 2] == celltype.Zero))
                 flag = true;
 
-            if ((field.GameField[0, 2] == celltype.Cross) && (field.GameField[1, 1] == celltype.Cross) && (field.GameField[2, 0] == celltype.Cross))
+            if ((field.GameField[0, 2] == celltype.Zero) && (field.GameField[1, 1] == celltype.Zero) && (field.GameField[2, 0] == celltype.Zero))
                 flag = true;
 
             return flag;
