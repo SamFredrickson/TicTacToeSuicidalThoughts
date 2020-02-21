@@ -176,7 +176,14 @@ namespace TicTacToeGame
                 flag = true;
                 dialog.CallWinner(pl2);
                 Console.ReadKey();
-            }
+            }  
+
+            return flag;
+        }
+
+        private bool CheckTie()
+        {
+            bool flag = false;
 
             if (CheckIsTieHappend())
             {
@@ -187,9 +194,10 @@ namespace TicTacToeGame
 
             return flag;
         }
+
         private void PlayerGoes()
         {
-            while (!CheckWinner()) {
+            while (!CheckWinner() && !CheckTie()) {
 
                 if (isterm)
                 {
