@@ -168,14 +168,12 @@ namespace TicTacToeGame
             {
                 flag = true;
                 dialog.CallWinner(pl1);
-                Console.ReadKey();
             }
 
             if (CheckIsCrossWinner())
             {
                 flag = true;
                 dialog.CallWinner(pl2);
-                Console.ReadKey();
             }  
 
             return flag;
@@ -189,7 +187,6 @@ namespace TicTacToeGame
             {
                 flag = true;
                 dialog.CallTie();
-                Console.ReadKey();
             }
 
             return flag;

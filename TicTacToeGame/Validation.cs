@@ -46,23 +46,46 @@ namespace TicTacToeGame
 
             if (xCoor < 0)
             {
-                Errors.Add("Координата X не должна быть меньше нуля");
+                var busy_field = from error in Errors
+                                 where error == "Координата X не должна быть меньше нуля"
+                                 select error;
+
+                if (!busy_field.Any())
+                    Errors.Add("Координата X не должна быть меньше нуля");
+
                 flag = false;
             }
             if (yCoor < 0)
             {
-                Errors.Add("Координата Y не должна быть меньше нуля");
+                var busy_field = from error in Errors
+                                 where error == "Координата Y не должна быть меньше нуля"
+                                 select error;
+
+                if (!busy_field.Any())
+                    Errors.Add("Координата Y не должна быть меньше нуля");
+
                 flag = false;
             }
 
             if (xCoor > 2)
             {
-                Errors.Add("Координата X не должна быть больше двух");
+                var busy_field = from error in Errors
+                                 where error == "Координата X не должна быть больше двух"
+                                 select error;
+
+                if (!busy_field.Any())
+                    Errors.Add("Координата X не должна быть больше двух");
+
                 flag = false;
             }
             if (yCoor > 2)
             {
-                Errors.Add("Координата Y не должна быть больше двух");
+                var busy_field = from error in Errors
+                                 where error == "Координата Y не должна быть больше двух"
+                                 select error;
+
+                if (!busy_field.Any())
+                    Errors.Add("Координата Y не должна быть больше двух");
                 flag = false;
             }
 
@@ -75,7 +98,15 @@ namespace TicTacToeGame
 
             if(Fieldishe.GameField[xCoor, yCoor] != celltype.Empty)
             {
-                Errors.Add("ТЫ ШТО САМЫЙ УМНЫЙ???? ИГРАЙ А НЕ ПЫТАЙСЯ СЛОМАТЬ ЧТО НИБУДЬ!1111");
+
+                var busy_field = from error in Errors
+                                 where error == "Поле занято!"
+                                 select error;
+
+                if (!busy_field.Any())
+                       Errors.Add("Поле занято!");
+
+
                 flag = false;
             }
 
